@@ -14,6 +14,7 @@ REVIEW = "Our waiter Monday seated us at 9 a.m., served cold coffee, then billed
 # would reject.
 def main():
     assert REVIEW, "review line must not be empty"
+    assert "Monday" in REVIEW, "the joke must name Monday itself"
     assert len(REVIEW.split()) <= 25, "review exceeds the 25-word limit"
     assert len(REVIEW) <= 180, "review exceeds the 180-character gate"
     assert "\n" not in REVIEW, "review must be a single line"
